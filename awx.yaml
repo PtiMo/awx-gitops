@@ -1,0 +1,14 @@
+---
+apiVersion: awx.ansible.com/v1beta1
+kind: AWX
+metadata:
+  name: awx
+spec:
+  service_type: LoadBalancer
+  loadbalancer_ip: '192.168.10.25'
+  loadbalancer_protocol: https
+  loadbalancer_port: 443
+  service_annotations: |
+    environment: test
+  service_labels: |
+    environment: test
